@@ -22,19 +22,19 @@ int main(int argc, char const *argv[]){
     //dekalrasi gravitasi
     g=9.8;
     //mendeklarasikan variabel output
-    ofstream text;
+    ofstream file;
     //membuka atau membuat file output dengan nama Hasil.txt
-    text.open("Hasil.txt");
+    file.open("Hasil.txt");
     //looping program untuk melakukan kalkulasi tinggi 
     //dan akan berhenti saat ketinggan dibawah nol
     while(y>=0){
         //fungsi gerak parabola menghitung tinggi terhadap waktu
         y = (v*sin(o)*t)-((0.5*g*pow(t,2)));
         //menulis output ke dalam Hasil.txt
-        text << "t=" << t <<"\t y= " << y <<"m"<<endl;
+        file << "t=" << t <<"\t y= " << y <<"m"<<endl;
         //menambah nilai waktu sebesar 1 (detik)
         t++;  
     }
-    text.close();
+    file.close();
     return 0;
 }
