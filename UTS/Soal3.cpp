@@ -42,19 +42,15 @@ int main() {
 	cout<<"---------------------------------------------------------"<<endl;
 
 	
-	if (tot>=100000){
-		diskon=0.06*tot;
-	}else if (tot>=50000){
-		diskon=0.04;
-	}else if (tot>=25000){
-		diskon=0.02;
+	if (tot>=40000){
+		diskon=(tot/40000)*3000;
 	}else {
 		diskon=0;
 	}
 	
 	
 	cout<<"Jumlah Bayar : Rp."<<tot<<endl;
-	cout<<"Dikon        : Rp."<<diskon<<endl; 
+	cout<<"Diskon       : Rp."<<diskon<<endl; 
 	cout<<"Total Bayar  : Rp."<<tot-diskon<<endl;
 	cout<<"Bayar        : Rp.";
 	cin>>bayar; 
